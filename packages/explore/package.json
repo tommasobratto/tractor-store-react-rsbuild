@@ -9,19 +9,16 @@
     "move": "mv dist ../../dist/explore"
   },
   "dependencies": {
+    "lerna": "^10.0.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-router-dom": "6.26.0"
+    "react-router-dom": "^7.18.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.25.2",
     "@module-federation/rsbuild-plugin": "^2.9.0",
     "@rsbuild/core": "^2.2.4",
     "@rsbuild/plugin-react": "^2.1.0",
     "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "webpack": "^5.93.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.4"
+    "@types/react-dom": "^18.3.0"
   }
 }
