@@ -18,8 +18,6 @@ export default defineConfig(({ envMode }) => {
         exposes: {
           './Loading': './src/Loading.tsx',
           './AppStore': './src/AppStore.ts',
-          './StoreDisplay': './src/common/components/StoreDisplay.tsx',
-          './utils': './src/common/utils/utils.ts',
         },
         remotes: {
           explore: isProd
