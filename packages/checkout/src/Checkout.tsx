@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import CompactHeader from './components/CompactHeader';
 import Button from './components/Button';
 import Footer from 'explore/Footer';
-import StorePicker from 'explore/StorePicker';
+import { useAppStore } from "app/AppStore";
+import StorePicker from "explore/StorePicker";
 
 function useShop() {
   const [shop, setShop] = React.useState('');
@@ -30,7 +31,7 @@ const defaultForm = {
 
 const Checkout: React.FC = () => {
   const navigate = useNavigate();
-  const shop = useShop();
+  const shop = useAppStore((state) => state.currentStore);
   const [data, setData] = React.useState(defaultForm);
   const isInvalid = !shop || !data.firstName || !data.lastName;
 
@@ -99,7 +100,7 @@ const Checkout: React.FC = () => {
               type="text"
               id="c_storeId"
               name="storeId"
-              value={shop}
+              value={shop ?? ""}
               readOnly
               required
             />
