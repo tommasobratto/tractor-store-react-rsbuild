@@ -16,9 +16,7 @@
   "license": "ISC",
   "devDependencies": {
     "@rsbuild/core": "^2.2.4",
-    "http-server": "^14.1.1"
-  },
-  "dependencies": {
+    "http-server": "^14.1.1",
     "@module-federation/rsbuild-plugin": "^2.9.0",
     "@rsbuild/plugin-react": "^2.1.0"
   }
