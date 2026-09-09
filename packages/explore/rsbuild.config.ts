@@ -33,6 +33,7 @@ export default defineConfig(({ envMode }) => {
           react: { singleton: true },
           'react-dom': { singleton: true },
           'react-router-dom': { singleton: true },
+          zustand: { singleton: true }
         },
       }),
     ],
