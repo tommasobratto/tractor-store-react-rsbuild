@@ -7,6 +7,8 @@ const { Suspense } = React;
 
 createRoot(document.getElementById("app")!).render(
   <React.StrictMode>
+    <Suspense fallback={<Loading />}>
       <App />
+    </Suspense>
   </React.StrictMode>
 );
