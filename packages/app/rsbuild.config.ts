@@ -8,10 +8,13 @@ export default defineConfig(({ envMode }) => {
   const host = process.env.HOST || '';
 
   return {
+    dev: {
+      assetPrefix: true
+    },
     plugins: [
       pluginReact(),
       pluginModuleFederation({
-        name: 'app',
+        name: 'shell',
         exposes: {
           './Loading': './src/Loading.tsx',
         },
@@ -33,13 +36,14 @@ export default defineConfig(({ envMode }) => {
         },
       }),
     ],
+    filename: 'remoteEntry.js',
     source: {
       entry: {
         index: './src/index',
       },
     },
     output: {
-      assetPrefix: '/',
+      assetPrefix: 'auto',
     },
     html: {
       template: './public/index.html',

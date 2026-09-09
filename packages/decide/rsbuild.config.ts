@@ -8,6 +8,9 @@ export default defineConfig(({ envMode }) => {
   const host = process.env.HOST || '';
 
   return {
+    dev: {
+      assetPrefix: true
+    },
     plugins: [
       pluginReact(),
       pluginModuleFederation({
@@ -23,8 +26,8 @@ export default defineConfig(({ envMode }) => {
             ? `checkout@${host}/checkout/mf-manifest.json`
             : 'checkout@http://localhost:3002/mf-manifest.json',
           app: isProd
-            ? `app@${host}/mf-manifest.json`
-            : 'app@http://localhost:3000/mf-manifest.json',
+            ? `shell@${host}/mf-manifest.json`
+            : 'shell@http://localhost:3000/mf-manifest.json',
         },
         shared: {
           react: { singleton: true },
@@ -38,6 +41,7 @@ export default defineConfig(({ envMode }) => {
         index: './src/index',
       },
     },
+    filename: 'remoteEntry.js',
     output: {
       assetPrefix: 'auto',
     },
