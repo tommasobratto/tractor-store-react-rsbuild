@@ -6,24 +6,6 @@ import Footer from 'explore/Footer';
 import { useAppStore } from "app/AppStore";
 import StorePicker from "explore/StorePicker";
 
-function useShop() {
-  const [shop, setShop] = React.useState('');
-
-  React.useEffect(() => {
-    const changeShop = (ev: CustomEvent) => {
-      const { shop } = ev.detail;
-      setShop(shop);
-    };
-    window.addEventListener('selected-shop', changeShop);
-
-    return () => {
-      window.removeEventListener('selected-shop', changeShop);
-    };
-  }, []);
-
-  return shop;
-}
-
 const defaultForm = {
   firstName: '',
   lastName: '',
@@ -31,7 +13,7 @@ const defaultForm = {
 
 const Checkout: React.FC = () => {
   const navigate = useNavigate();
-  const shop = useAppStore((state) => state.currentStore);
+  const shop = useAppStore((state: { currentStore: any; }) => state.currentStore);
   const [data, setData] = React.useState(defaultForm);
   const isInvalid = !shop || !data.firstName || !data.lastName;
 

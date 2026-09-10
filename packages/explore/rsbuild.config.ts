@@ -1,3 +1,4 @@
+import path from 'node:path';
 import { defineConfig } from '@rsbuild/core';
 import { pluginReact } from '@rsbuild/plugin-react';
 import { pluginModuleFederation } from '@module-federation/rsbuild-plugin';
@@ -7,13 +8,12 @@ export default defineConfig(({ envMode }) => {
   const host = process.env.HOST || '';
 
   return {
-    dev: {
-      assetPrefix: true
-    },
+    dev: { assetPrefix: true },
     plugins: [
       pluginReact(),
       pluginModuleFederation({
         name: 'explore',
+        filename: 'remoteEntry.js',
         exposes: {
           './Header': './src/Header.tsx',
           './Footer': './src/Footer.tsx',
@@ -33,26 +33,24 @@ export default defineConfig(({ envMode }) => {
           react: { singleton: true },
           'react-dom': { singleton: true },
           'react-router-dom': { singleton: true },
-          zustand: { singleton: true }
+          zustand: { singleton: true },
         },
+        dts: false,
       }),
     ],
-    filename: 'remoteEntry.js',
-    source: {
-      entry: {
-        index: './src/index',
-      },
-    },
-    output: {
-      assetPrefix: 'auto',
-    },
-    html: {
-      template: './public/index.html',
-    },
+    source: { entry: { index: './src/index' } },
+    output: { assetPrefix: 'auto' },
+    html: { template: './public/index.html' },
     server: {
       port: 3001,
-      headers: {
-        'Access-Control-Allow-Origin': '*',
+      headers: { 'Access-Control-Allow-Origin': '*' },
+    },
+    tools: {
+      rspack: (config) => {
+        config.watchOptions = {
+          ignored: ['**/node_modules/**', '**/@mf-types/**', '**/dist/**'],
+        };
+        return config;
       },
     },
   };

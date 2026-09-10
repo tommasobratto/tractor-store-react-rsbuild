@@ -10,14 +10,19 @@
     "mkdist": "rm -rf ./dist && mkdir ./dist",
     "build:local": "pnpm run mkdist && pnpm -r build -- --env host=\"http://localhost:8081\" && pnpm -r move",
     "build": "pnpm run mkdist && pnpm -r build -- --env host=\"https://tractor-store-react.pages.dev\" && pnpm -r move",
-    "serve": "pnpm run build:local && http-server -p 8081 -c-1 dist"
+    "serve": "pnpm run build:local && http-server -p 8081 -c-1 dist",
+    "typecheck": "pnpm -r exec tsc --noEmit"
   },
   "author": "teabyii",
   "license": "ISC",
   "devDependencies": {
-    "@rsbuild/core": "^2.2.4",
-    "http-server": "^14.1.1",
     "@module-federation/rsbuild-plugin": "^2.9.0",
+    "@rsbuild/core": "^2.2.4",
     "@rsbuild/plugin-react": "^2.1.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "typescript": "~5.9.0"
+    }
   }
 }
