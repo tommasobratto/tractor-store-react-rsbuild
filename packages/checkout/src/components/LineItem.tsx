@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import Button from './Button';
 import { src, srcset } from '../js/utils';
+import { useAppStore } from 'app/AppStore';
 
 interface LineItemProps {
   sku: string;
@@ -15,12 +16,10 @@ interface LineItemProps {
 export default ({ sku, id, name, quantity, total, image }: LineItemProps) => {
   const url = `/product/${id}?sku=${sku}`;
 
+  const removeFromCart = useAppStore((state) => state.removeFromCart);
+
   function submit(ev: React.SyntheticEvent) {
-    window.dispatchEvent(
-      new CustomEvent('remove-from-cart', {
-        detail: { sku },
-      }),
-    );
+    removeFromCart(sku);
     ev.preventDefault();
   }
 

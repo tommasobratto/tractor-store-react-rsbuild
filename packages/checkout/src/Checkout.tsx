@@ -14,6 +14,7 @@ const defaultForm = {
 const Checkout: React.FC = () => {
   const navigate = useNavigate();
   const shop = useAppStore((state: { currentStore: any; }) => state.currentStore);
+  const clearCart = useAppStore((state) => state.clearCart);
   const [data, setData] = React.useState(defaultForm);
   const isInvalid = !shop || !data.firstName || !data.lastName;
 
@@ -26,7 +27,7 @@ const Checkout: React.FC = () => {
   }
 
   function submit(ev: React.SyntheticEvent) {
-    window.dispatchEvent(new CustomEvent('clear-cart'));
+    clearCart();
     navigate('/checkout/thanks');
     ev.preventDefault();
   }

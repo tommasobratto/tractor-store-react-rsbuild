@@ -1,9 +1,9 @@
 import * as React from 'react';
 import Button from './components/Button';
-import { useLineItems } from './data/store';
+import { useAppStore } from 'app/AppStore';
 
 const MiniCart: React.FC = () => {
-  const lineItems = useLineItems();
+  const lineItems = useAppStore((state) => state.cart);
   const quantity = lineItems.reduce((t, { quantity }) => t + quantity, 0);
 
   return (
