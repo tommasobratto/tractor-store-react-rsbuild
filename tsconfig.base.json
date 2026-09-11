@@ -13,8 +13,8 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
 
-    "strict": false,
-    "noImplicitAny": false,
+    "strict": true,
+    "noImplicitAny": true,
 
     "paths": {
       "app/*": ["./packages/app/src/*"],
