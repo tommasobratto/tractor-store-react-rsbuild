@@ -27,9 +27,9 @@ const Footer: React.FC = () => {
 
           <div className="e_Footer__credits">
             <h3>techstack</h3>
-            <p>SPA, Wepack, Module Fedoration, React</p>
+            <p>SPA, Wepack, Module Federation, React</p>
             <p>
-              build by <img src="https://kentl.dev/favicon.ico" alt="kentl.dev" width="15" height="15" />
+              built by 
               {" "}
               <a href="https://kentl.dev" target="_blank">
                 Kent.Li

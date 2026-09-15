@@ -1,20 +1,20 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import Button from './Button';
-import { src, srcset } from '../js/utils';
 import { useAppStore } from 'app/AppStore';
+import { src, srcset } from 'core';
 
 interface LineItemProps {
   sku: string;
-  id: string;
-  name: string;
+  productId: string;
+  variantName: string;
   quantity: number;
   total: number;
   image: string;
 }
 
-export default ({ sku, id, name, quantity, total, image }: LineItemProps) => {
-  const url = `/product/${id}?sku=${sku}`;
+export default ({ sku, productId, variantName, quantity, total, image }: LineItemProps) => {
+  const url = `/product/${productId}?sku=${sku}`;
 
   const removeFromCart = useAppStore((state) => state.removeFromCart);
 
@@ -30,14 +30,14 @@ export default ({ sku, id, name, quantity, total, image }: LineItemProps) => {
           src={src(image, 200)}
           srcSet={srcset(image, [200, 400])}
           sizes="200px"
-          alt={name}
+          alt={variantName}
           width="200"
           height="200"
         />
       </Link>
       <div className="c_LineItem__details">
         <Link to={url} className="c_LineItem__name">
-          <strong>{name}</strong>
+          <strong>{variantName}</strong>
           <br />
           {sku}
         </Link>
@@ -53,7 +53,7 @@ export default ({ sku, id, name, quantity, total, image }: LineItemProps) => {
               type="submit"
               value="remove"
               size="small"
-              title={`Remove ${name} from cart`}>
+              title={`Remove ${variantName} from cart`}>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" height="20" width="20" viewBox="0 0 48 48">
                 <path
                   fill="#000"

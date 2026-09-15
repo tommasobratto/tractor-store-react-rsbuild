@@ -1,14 +1,13 @@
-import * as React from 'react';
 import { Link } from 'react-router-dom';
-import { src, srcset } from '../js/utils';
+import { src, srcset } from 'core';
 
 interface RecommendationProps {
   image: string;
   url: string;
-  name: string;
+  fullName: string;
 }
 
-export default ({ image, url, name }: RecommendationProps) => {
+export default ({ image, url, fullName }: RecommendationProps) => {
   return (
     <li className="e_Recommendation">
       <Link className="e_Recommendation_link" to={url}>
@@ -21,7 +20,7 @@ export default ({ image, url, name }: RecommendationProps) => {
           width="200"
           height="200"
         />
-        <span className="e_Recommendation_name">{name}</span>
+        <span className="e_Recommendation_name">{fullName}</span>
       </Link>
     </li>
   );

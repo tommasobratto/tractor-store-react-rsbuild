@@ -1,15 +1,18 @@
 import * as React from 'react';
 import LineItem from './components/LineItem';
 import Button from './components/Button';
-import data from './data/db.json';
 import Header from 'explore/Header';
 import Footer from 'explore/Footer';
 import Recommendations from 'explore/Recommendations';
 import { useAppStore } from 'app/AppStore';
+import { useGetVariants, ProductVariant } from 'core';
+import Loading from 'app/Loading';
 
-function convertToLineItems(items: Array<{ sku: string; quantity: number }>) {
-  return items.reduce((res, { sku, quantity }) => {
-    const variant = data.variants.find((p) => p.sku === sku);
+function convertToLineItems(items: Array<{ sku: string; quantity: number }>, variants: ProductVariant[]) {
+  if (!variants) return [];
+  
+  return items.reduce<(ProductVariant & { quantity: number, total: number})[]>((res, { sku, quantity }) => {
+    const variant = variants.find((p) => p.sku === sku);
     if (variant) {
       res.push({ ...variant, quantity, total: variant.price * quantity });
     }
@@ -18,10 +21,13 @@ function convertToLineItems(items: Array<{ sku: string; quantity: number }>) {
 }
 
 const CartPage: React.FC = () => {
+  const { data, isLoading } = useGetVariants();
   const rawLineItems = useAppStore((state) => state.cart);
-  const lineItems = convertToLineItems(rawLineItems);
+  const lineItems = convertToLineItems(rawLineItems, data);
   const total = lineItems.reduce((res, { total }) => res + total, 0);
   const skus = lineItems.map(({ sku }) => sku);
+
+  if (isLoading) return <Loading />;
 
   return (
     <div data-boundary-page="checkout">

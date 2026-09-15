@@ -1,9 +1,11 @@
 import * as React from 'react';
-import data from './data/db.json';
 import Button from './components/Button';
-import { useAppStore, type Store } from 'app/AppStore';
+import { useAppStore } from 'app/AppStore';
 import { useEffect } from 'react';
-import { src, srcset } from './js/utils';
+import { src, srcset } from 'core';
+import { Store } from 'core';
+import { useGetStores } from 'core';
+import Loading from 'app/Loading';
 
 function StoreDisplay({ store }: { store: Store | null | undefined }) {
   if (!store) return <></>;
@@ -32,17 +34,21 @@ function StoreDisplay({ store }: { store: Store | null | undefined }) {
 const StorePicker: React.FC = () => {
   const ref = React.useRef<HTMLDialogElement>(null);
 
+  const { data, isLoading } = useGetStores();
+
   const stores = useAppStore((state) => state.stores);
   const setStores = useAppStore((state) => state.setStores);
   const currentStore = useAppStore((state) => state.currentStore);
   const setCurrentStore = useAppStore((state) => state.setCurrentStore);
 
   useEffect(() => {
-    setStores(data.stores);
-  }, [setStores]);
+    if (!isLoading) {
+      setStores(data);
+    }
+  }, [isLoading, data]);
 
   const currentStoreDisplay = React.useMemo(
-    () => stores.find((store) => store.id === currentStore) ?? null,
+    () => stores?.find((store) => store.id === currentStore) ?? null,
     [stores, currentStore],
   );
 
@@ -54,6 +60,8 @@ const StorePicker: React.FC = () => {
     setCurrentStore(shopId);
     ref.current?.close();
   };
+
+  if (isLoading) return <Loading /> 
 
   return (
     <div className="e_StorePicker">
@@ -69,7 +77,7 @@ const StorePicker: React.FC = () => {
         <div className="e_StorePicker_wrapper">
           <h2>Stores</h2>
           <ul className="e_StorePicker_list">
-            {stores.map((s) => (
+            {stores?.map((s) => (
               <li className="e_StorePicker_entry" key={s.id}>
                 <StoreDisplay store={s} />
                 <Button

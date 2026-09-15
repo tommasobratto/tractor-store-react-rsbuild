@@ -1,18 +1,8 @@
-import * as React from 'react';
-import data from './data/db.json';
+import Loading from 'app/Loading';
 import Recommendation from './components/Recommendation';
+import { ProductVariant, useGetRecommendations } from 'core';
 
-type Rgb = [number, number, number];
-
-export interface Reco {
-  name: string;
-  sku: string;
-  image: string;
-  url: string;
-  rgb: Rgb;
-}
-
-const r = data.recommendations as unknown as Record<string, Reco>;
+type Rgb = number[];
 
 function averageColor(colors: Rgb[]): Rgb {
   const total = colors.reduce(
@@ -22,8 +12,8 @@ function averageColor(colors: Rgb[]): Rgb {
   return total.map((c) => Math.round(c / colors.length)) as Rgb;
 }
 
-function skusToColors(skus: string[]): Rgb[] {
-  return skus.filter((sku) => r[sku]).map((sku) => r[sku].rgb);
+function skusToColors(r: Record<string, ProductVariant>, skus: string[]): Rgb[] {
+  return skus.filter((sku) => r[sku]).map((sku) => r[sku].colorRgb);
 }
 
 function colorDistance(rgb1: Rgb, rgb2: Rgb): number {
@@ -32,22 +22,26 @@ function colorDistance(rgb1: Rgb, rgb2: Rgb): number {
   return Math.sqrt((r1 - r2) ** 2 + (g1 - g2) ** 2 + (b1 - b2) ** 2);
 }
 
-function recosForSkus(skus: string[], length = 4): Reco[] {
-  const targetRgb = averageColor(skusToColors(skus));
+function recosForSkus(r: Record<string, ProductVariant>, skus: string[], length = 4) {
+  const targetRgb = averageColor(skusToColors(r, skus));
   const distances: Array<{ sku: string; distance: number }> = [];
 
   for (const sku in r) {
     if (!skus.includes(sku)) {
-      distances.push({ sku, distance: colorDistance(targetRgb, r[sku].rgb) });
+      distances.push({ sku, distance: colorDistance(targetRgb, r[sku].colorRgb) });
     }
   }
 
   distances.sort((a, b) => a.distance - b.distance);
-  return distances.slice(0, length).map((d) => r[d.sku]);
+  return distances.slice(0, length).map((d) => ({ ...r[d.sku], url: `/product/${r[d.sku].productId}?sku=${d.sku}` }));
 }
 
 const Recommendations: React.FC<{ skus: string[] }> = ({ skus }) => {
-  const recos = recosForSkus(skus);
+  const { data, isLoading } = useGetRecommendations();
+
+  if (isLoading) return <Loading/>
+
+  const recos = recosForSkus(data, skus);
   return recos.length ? (
     <div className="e_Recommendations" data-boundary="explore">
       <h2>Recommendations</h2>

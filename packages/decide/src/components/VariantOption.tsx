@@ -9,16 +9,16 @@ declare module 'react' {
 
 interface VariantOptionProps {
   sku: string;
-  name: string;
+  variantName: string;
   selected?: boolean;
-  color: string;
+  colorHex: string;
 }
 
-export default ({ sku, name, selected, color }: VariantOptionProps) => {
+export default ({ sku, variantName, selected, colorHex }: VariantOptionProps) => {
   return (
-    <li className="d_VariantOption" style={{ '--variant-color': color }}>
+    <li className="d_VariantOption" style={{ '--variant-color': colorHex }}>
       <i className="d_VariantOption__color"></i>
-      {selected ? <strong>{name}</strong> : <Link to={`?sku=${sku}`}>{name}</Link>}
+      {selected ? <strong>{variantName}</strong> : <Link to={`?sku=${sku}`}>{variantName}</Link>}
     </li>
   );
 };

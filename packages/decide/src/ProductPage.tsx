@@ -1,16 +1,16 @@
-import * as React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import VariantOption from './components/VariantOption';
-import data from './data/db.json';
-import { src, srcset } from './js/utils';
 
 import Header from 'explore/Header';
 import Footer from 'explore/Footer';
 import Recommendations from 'explore/Recommendations';
 import AddToCart from 'checkout/AddToCart';
+import { src, srcset, useGetProducts, useGetVariants } from 'core';
+import { useMemo, useState } from 'react';
+import Loading from 'app/Loading';
 
 function useSku() {
-  const [sku, setSku] = React.useState(() => new URL(location.href).searchParams.get('sku'));
+  const [sku, setSku] = useState(() => new URL(location.href).searchParams.get('sku'));
   const navigate = useNavigate();
 
   return [
@@ -24,9 +24,17 @@ function useSku() {
 
 const ProductPage: React.FC = () => {
   const { id } = useParams();
+  const { data: products, isLoading: isProductsLoading } = useGetProducts();
+  const { data: allVariants, isLoading: isVariantsLoading } = useGetVariants();
+
   const [sku, setSku] = useSku();
-  const { name, variants, highlights = [] } = data.products.find((p) => p.id === id);
-  const variant = variants.find((v) => v.sku === sku) || variants[0];
+
+  const product = useMemo(() => products.find((p) => p.id === id), [products, id]);
+  const name = useMemo(() => product ? product.name : "" ,[product])
+  const highlights = useMemo(() => product ? product.highlights : [] ,[product])
+
+  const variants = useMemo(() => product ? allVariants.filter(v => v.productId === product.id) ?? [] : [], [product, allVariants]);
+  const variant = useMemo(() => variants.find((v) => v.sku === sku) ?? variants[0], [variants, sku]);
 
   const handleSkuSelect = (ev: React.MouseEvent) => {
     const attr = (ev.target as HTMLElement).getAttribute('href');
@@ -36,6 +44,10 @@ const ProductPage: React.FC = () => {
       setSku(val);
     }
   };
+  
+  if (isProductsLoading || isVariantsLoading) return <Loading />
+
+  if (!variant) return <></>
 
   return (
     <div data-boundary-page="decide">
@@ -49,7 +61,7 @@ const ProductPage: React.FC = () => {
             sizes="400px"
             width="400"
             height="400"
-            alt={`${name} - ${variant.name}`}
+            alt={`${name} - ${variant.variantName}`}
           />
           <div className="d_ProductPage__productInformation">
             <h2 className="d_ProductPage__title">{name}</h2>

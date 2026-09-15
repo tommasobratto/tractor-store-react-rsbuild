@@ -1,17 +1,22 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import data from './data/db.json';
-import { src, srcset } from './js/utils';
+import { src, srcset } from 'core';
 import Header from './Header';
 import Footer from './Footer';
 import Recommendations from './Recommendations';
+import { useGetTeasers } from 'core';
+import Loading from 'app/Loading';
 
 const HomePage: React.FC = () => {
+  const { data: teaser, isLoading } = useGetTeasers();
+
+  if (isLoading) return <Loading />;
+
   return (
     <div data-boundary-page="explore">
       <Header />
       <main className="e_HomePage">
-        {data.teaser.map(({ title, image, url }, i) => (
+        {teaser.map(({ title, image, url }, i) => (
           <Link key={i} className="e_HomePage__categoryLink" to={url}>
             <img
               src={src(image, 500)}

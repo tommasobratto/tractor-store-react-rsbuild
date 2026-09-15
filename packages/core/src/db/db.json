@@ -1,0 +1,805 @@
+{
+  "teaser": [
+    {
+      "title": "Classic Tractors",
+      "image": "https://blueprint.the-tractor.store/cdn/img/scene/[size]/classics.webp",
+      "url": "/products/classic"
+    },
+    {
+      "title": "Autonomous Tractors",
+      "image": "https://blueprint.the-tractor.store/cdn/img/scene/[size]/autonomous.webp",
+      "url": "/products/autonomous"
+    }
+  ],
+  "categories": [
+    {
+      "key": "classic",
+      "name": "Classics"
+    },
+    {
+      "key": "autonomous",
+      "name": "Autonomous"
+    }
+  ],
+  "stores": [
+    {
+      "id": "store-a",
+      "name": "Aurora Flagship Store",
+      "street": "Astronaut Way 1",
+      "city": "Arlington",
+      "image": "https://blueprint.the-tractor.store/cdn/img/store/[size]/store-1.webp"
+    },
+    {
+      "id": "store-b",
+      "name": "Big Micro Machines",
+      "street": "Broadway 2",
+      "city": "Burlington",
+      "image": "https://blueprint.the-tractor.store/cdn/img/store/[size]/store-2.webp"
+    },
+    {
+      "id": "store-c",
+      "name": "Central Mall",
+      "street": "Clown Street 3",
+      "city": "Cryo",
+      "image": "https://blueprint.the-tractor.store/cdn/img/store/[size]/store-3.webp"
+    },
+    {
+      "id": "store-d",
+      "name": "Downtown Model Store",
+      "street": "Duck Street 4",
+      "city": "Davenport",
+      "image": "https://blueprint.the-tractor.store/cdn/img/store/[size]/store-4.webp"
+    }
+  ],
+  "products": [
+    {
+      "id": "AU-01",
+      "name": "TerraFirma AutoCultivator T-300",
+      "category": "autonomous",
+      "highlights": [
+        "Precision GPS mapping optimizes field coverage.",
+        "Hybrid engine ensures eco-friendly extended operation.",
+        "Fully autonomous with smart obstacle detection and terrain adaptation."
+      ]
+    },
+    {
+      "id": "AU-02",
+      "name": "SmartFarm Titan",
+      "category": "autonomous",
+      "highlights": [
+        "Advanced autopilot technology for precise farming operations.",
+        "Eco-friendly solar-assisted power system for sustainable use.",
+        "Intelligent AI for real-time field analysis and automated adjustments."
+      ]
+    },
+    {
+      "id": "AU-03",
+      "name": "FutureHarvest Navigator",
+      "category": "autonomous",
+      "highlights": [
+        "Autonomous navigation with sub-inch accuracy",
+        "Solar-enhanced hybrid powertrain for extended operation",
+        "Real-time crop and soil health analytics"
+      ]
+    },
+    {
+      "id": "AU-04",
+      "name": "Sapphire Sunworker 460R",
+      "category": "autonomous",
+      "highlights": [
+        "Next-generation autonomous guidance system for seamless operation",
+        "High-capacity energy storage for all-day work without recharge",
+        "Advanced analytics suite for precision soil and plant health management"
+      ]
+    },
+    {
+      "id": "AU-05",
+      "name": "EcoGrow Crop Commander",
+      "category": "autonomous",
+      "highlights": [
+        "Ultra-precise field navigation technology",
+        "Dual-mode power system for maximum uptime",
+        "On-the-go field data analysis for smart farming decisions"
+      ]
+    },
+    {
+      "id": "AU-06",
+      "name": "FarmFleet Sovereign",
+      "category": "autonomous",
+      "highlights": [
+        "Robust all-terrain adaptability for diverse farm landscapes",
+        "High-efficiency energy matrix for longer field endurance",
+        "Integrated crop management system with advanced diagnostics"
+      ]
+    },
+    {
+      "id": "AU-07",
+      "name": "Verde Voyager",
+      "category": "autonomous",
+      "highlights": [
+        "Adaptive drive system intelligently navigates through diverse field conditions",
+        "Clean energy operation with advanced solar battery technology",
+        "High-resolution field scanners for precise agronomy insights"
+      ]
+    },
+    {
+      "id": "AU-08",
+      "name": "Field Pioneer",
+      "category": "autonomous",
+      "highlights": [
+        "Automated field traversal with intelligent pathfinding algorithms",
+        "Eco-friendly electric motors paired with high-capacity batteries",
+        "Real-time environmental monitoring for optimal crop growth"
+      ]
+    },
+    {
+      "id": "CL-01",
+      "name": "Heritage Workhorse",
+      "category": "classic",
+      "highlights": [
+        "Proven reliability with a touch of modern reliability enhancements",
+        "Robust construction equipped to withstand decades of labor",
+        "User-friendly operation with traditional manual controls"
+      ]
+    },
+    {
+      "id": "CL-02",
+      "name": "Falcon Crest Farm",
+      "category": "classic",
+      "highlights": [
+        "Rugged simplicity meets classic design",
+        "Built-to-last machinery for reliable fieldwork",
+        "Ease of control with straightforward mechanical systems"
+      ]
+    },
+    {
+      "id": "CL-03",
+      "name": "Falcon Crest Work",
+      "category": "classic",
+      "highlights": [
+        "Vintage engineering with a legacy of durability",
+        "Powerful yet simple mechanics for easy operation and repair",
+        "Classic aesthetics with a robust body, built to last"
+      ]
+    },
+    {
+      "id": "CL-04",
+      "name": "Broadfield Majestic",
+      "category": "classic",
+      "highlights": [
+        "Built with the robust heart of early industrial workhorses",
+        "Simplified mechanics for unparalleled ease of use and maintenance",
+        "A testament to early agricultural machinery with a dependable engine"
+      ]
+    },
+    {
+      "id": "CL-05",
+      "name": "Countryside Commander",
+      "category": "classic",
+      "highlights": [
+        "Reliable performance with time-tested engineering",
+        "Rugged design for efficient operation across all types of terrain",
+        "Classic operator comfort with modern ergonomic enhancements"
+      ]
+    },
+    {
+      "id": "CL-06",
+      "name": "Danamark Steadfast",
+      "category": "classic",
+      "highlights": [
+        "Engineered for the meticulous demands of Danish agriculture",
+        "Sturdy chassis and reliable mechanics for longevity",
+        "Utilitarian design with practical functionality and comfort"
+      ]
+    },
+    {
+      "id": "CL-07",
+      "name": "Greenland Rover",
+      "category": "classic",
+      "highlights": [
+        "Engineered to tackle the diverse European terrain with ease",
+        "Sturdy and reliable mechanics known for their longevity",
+        "Ergonomically designed for comfort during long working hours"
+      ]
+    },
+    {
+      "id": "CL-08",
+      "name": "Holland Hamster",
+      "category": "classic",
+      "highlights": [
+        "Dutch craftsmanship for precision and quality",
+        "Optimized for tulip fields and versatile European landscapes",
+        "Ergonomic design with a focus on operator comfort and efficiency"
+      ]
+    },
+    {
+      "id": "CL-09",
+      "name": "TerraFirma Veneto",
+      "category": "classic",
+      "highlights": [
+        "Elegant Italian design with sleek lines and a vibrant aesthetic",
+        "Precision mechanics for vineyard and orchard maneuverability",
+        "Comfort-focused design with a flair for the dramatic"
+      ]
+    },
+    {
+      "id": "CL-10",
+      "name": "Global Gallant",
+      "category": "classic",
+      "highlights": [
+        "Retro design with a nod to the golden era of farming",
+        "Engine robustness that stands the test of time",
+        "Functional simplicity for ease of operation in any region"
+      ]
+    },
+    {
+      "id": "CL-11",
+      "name": "Scandinavia Sower",
+      "category": "classic",
+      "highlights": [
+        "Authentic Swedish engineering for optimal cold-climate performance",
+        "Sturdy build and mechanics for lifelong reliability",
+        "Iconic design reflecting the simplicity and efficiency of Scandinavian style"
+      ]
+    },
+    {
+      "id": "CL-12",
+      "name": "Celerity Cruiser",
+      "category": "classic",
+      "highlights": [
+        "A speedster in the classic tractor segment, unparalleled in quick task completion",
+        "Sleek design with aerodynamic contours for reduced drag",
+        "Enhanced gearbox for smooth acceleration and nimble handling"
+      ]
+    },
+    {
+      "id": "CL-13",
+      "name": "Rapid Racer",
+      "category": "classic",
+      "highlights": [
+        "Streamlined design for faster field operations",
+        "Optimized gear ratios for efficient power transmission",
+        "Advanced air flow system for superior engine cooling"
+      ]
+    },
+    {
+      "id": "CL-14",
+      "name": "Caribbean Cruiser",
+      "category": "classic",
+      "highlights": [
+        "Robust construction for enduring performance",
+        "Time-tested design with a proven track record",
+        "Easy-to-service mechanics for long-term reliability"
+      ]
+    },
+    {
+      "id": "CL-15",
+      "name": "Fieldmaster Classic",
+      "category": "classic",
+      "highlights": [
+        "Timeless design with a focus on comfort and control",
+        "Efficient fuel consumption with a powerful engine",
+        "Versatile functionality for all types of agricultural work"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "sku": "AU-01-SI",
+      "productId": "AU-01",
+      "variantName": "Silver",
+      "fullName": "TerraFirma AutoCultivator T-300 Silver",
+      "price": 1000,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/AU-01-SI.webp",
+      "colorHex": "#C0C0C0",
+      "colorRgb": [192, 192, 192],
+      "inventory": 8
+    },
+    {
+      "sku": "AU-02-OG",
+      "productId": "AU-02",
+      "variantName": "Sunset Copper",
+      "fullName": "SmartFarm Titan Sunset Copper",
+      "price": 4100,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/AU-02-OG.webp",
+      "colorHex": "#dd5219",
+      "colorRgb": [221, 82, 25],
+      "inventory": 4
+    },
+    {
+      "sku": "AU-02-BL",
+      "productId": "AU-02",
+      "variantName": "Cosmic Sapphire",
+      "fullName": "SmartFarm Titan Cosmic Sapphire",
+      "price": 4000,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/AU-02-BL.webp",
+      "colorHex": "#2A52BE",
+      "colorRgb": [42, 82, 190],
+      "inventory": 3
+    },
+    {
+      "sku": "AU-02-GG",
+      "productId": "AU-02",
+      "variantName": "Verdant Shadow",
+      "fullName": "SmartFarm Titan Verdant Shadow",
+      "price": 4000,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/AU-02-GG.webp",
+      "colorHex": "#005A04",
+      "colorRgb": [0, 90, 4],
+      "inventory": 6
+    },
+    {
+      "sku": "AU-03-TQ",
+      "productId": "AU-03",
+      "variantName": "Turquoise Titan",
+      "fullName": "FutureHarvest Navigator Turquoise Titan",
+      "price": 1600,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/AU-03-TQ.webp",
+      "colorHex": "#169fb8",
+      "colorRgb": [22, 159, 184],
+      "inventory": 9
+    },
+    {
+      "sku": "AU-03-PL",
+      "productId": "AU-03",
+      "variantName": "Majestic Violet",
+      "fullName": "FutureHarvest Navigator Majestic Violet",
+      "price": 1700,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/AU-03-PL.webp",
+      "colorHex": "#9B5FC0",
+      "colorRgb": [155, 95, 192],
+      "inventory": 7
+    },
+    {
+      "sku": "AU-03-RD",
+      "productId": "AU-03",
+      "variantName": "Scarlet Dynamo",
+      "fullName": "FutureHarvest Navigator Scarlet Dynamo",
+      "price": 1900,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/AU-03-RD.webp",
+      "colorHex": "#FF2400",
+      "colorRgb": [255, 36, 0],
+      "inventory": 8
+    },
+    {
+      "sku": "AU-03-YE",
+      "productId": "AU-03",
+      "variantName": "Sunbeam Yellow",
+      "fullName": "FutureHarvest Navigator Sunbeam Yellow",
+      "price": 1800,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/AU-03-YE.webp",
+      "colorHex": "#faad00",
+      "colorRgb": [250, 173, 0],
+      "inventory": 3
+    },
+    {
+      "sku": "AU-04-RD",
+      "productId": "AU-04",
+      "variantName": "Ruby Red",
+      "fullName": "Sapphire Sunworker 460R Ruby Red",
+      "price": 8700,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/AU-04-RD.webp",
+      "colorHex": "#9B111E",
+      "colorRgb": [155, 17, 30],
+      "inventory": 9
+    },
+    {
+      "sku": "AU-04-BK",
+      "productId": "AU-04",
+      "variantName": "Midnight Onyx",
+      "fullName": "Sapphire Sunworker 460R Midnight Onyx",
+      "price": 8500,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/AU-04-BK.webp",
+      "colorHex": "#353839",
+      "colorRgb": [53, 56, 57],
+      "inventory": 8
+    },
+    {
+      "sku": "AU-05-ZH",
+      "productId": "AU-05",
+      "variantName": "Zestful Horizon",
+      "fullName": "EcoGrow Crop Commander Zestful Horizon",
+      "price": 3400,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/AU-05-ZH.webp",
+      "colorHex": "#FFA07A",
+      "colorRgb": [255, 160, 122],
+      "inventory": 8
+    },
+    {
+      "sku": "AU-06-CZ",
+      "productId": "AU-06",
+      "variantName": "Canary Zenith",
+      "fullName": "FarmFleet Sovereign Canary Zenith",
+      "price": 2200,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/AU-06-CZ.webp",
+      "colorHex": "#FFD700",
+      "colorRgb": [255, 215, 0],
+      "inventory": 3
+    },
+    {
+      "sku": "AU-06-MT",
+      "productId": "AU-06",
+      "variantName": "Minted Jade",
+      "fullName": "FarmFleet Sovereign Minted Jade",
+      "price": 2100,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/AU-06-MT.webp",
+      "colorHex": "#628882",
+      "colorRgb": [98, 136, 130],
+      "inventory": 5
+    },
+    {
+      "sku": "AU-07-MT",
+      "productId": "AU-07",
+      "variantName": "Glacial Mint",
+      "fullName": "Verde Voyager Glacial Mint",
+      "price": 4000,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/AU-07-MT.webp",
+      "colorHex": "#AFDBD2",
+      "colorRgb": [175, 219, 210],
+      "inventory": 4
+    },
+    {
+      "sku": "AU-07-YE",
+      "productId": "AU-07",
+      "variantName": "Sunbeam Yellow",
+      "fullName": "Verde Voyager Sunbeam Yellow",
+      "price": 5000,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/AU-07-YE.webp",
+      "colorHex": "#FFDA03",
+      "colorRgb": [255, 218, 3],
+      "inventory": 9
+    },
+    {
+      "sku": "AU-08-WH",
+      "productId": "AU-08",
+      "variantName": "Polar White",
+      "fullName": "Field Pioneer Polar White",
+      "price": 4500,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/AU-08-WH.webp",
+      "colorHex": "#E8E8E8",
+      "colorRgb": [232, 232, 232],
+      "inventory": 4
+    },
+    {
+      "sku": "CL-01-GR",
+      "productId": "CL-01",
+      "variantName": "Verdant Field",
+      "fullName": "Heritage Workhorse Verdant Field",
+      "price": 5700,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-01-GR.webp",
+      "colorHex": "#6B8E23",
+      "colorRgb": [107, 142, 35],
+      "inventory": 8
+    },
+    {
+      "sku": "CL-01-GY",
+      "productId": "CL-01",
+      "variantName": "Stormy Sky",
+      "fullName": "Heritage Workhorse Stormy Sky",
+      "price": 6200,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-01-GY.webp",
+      "colorHex": "#708090",
+      "colorRgb": [112, 128, 144],
+      "inventory": 7
+    },
+    {
+      "sku": "CL-02-BL",
+      "productId": "CL-02",
+      "variantName": "Cerulean Classic",
+      "fullName": "Falcon Crest Farm Cerulean Classic",
+      "price": 2600,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-02-BL.webp",
+      "colorHex": "#007BA7",
+      "colorRgb": [0, 123, 167],
+      "inventory": 1
+    },
+    {
+      "sku": "CL-03-GR",
+      "productId": "CL-03",
+      "variantName": "Meadow Green",
+      "fullName": "Falcon Crest Work Meadow Green",
+      "price": 2300,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-03-GR.webp",
+      "colorHex": "#7CFC00",
+      "colorRgb": [124, 252, 0],
+      "inventory": 7
+    },
+    {
+      "sku": "CL-03-PI",
+      "productId": "CL-03",
+      "variantName": "Rustic Rose",
+      "fullName": "Falcon Crest Work Rustic Rose",
+      "price": 2300,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-03-PI.webp",
+      "colorHex": "#b50018",
+      "colorRgb": [181, 0, 24],
+      "inventory": 3
+    },
+    {
+      "sku": "CL-03-YE",
+      "productId": "CL-03",
+      "variantName": "Harvest Gold",
+      "fullName": "Falcon Crest Work Harvest Gold",
+      "price": 2300,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-03-YE.webp",
+      "colorHex": "#DA9100",
+      "colorRgb": [218, 145, 0],
+      "inventory": 6
+    },
+    {
+      "sku": "CL-04-BL",
+      "productId": "CL-04",
+      "variantName": "Oceanic Blue",
+      "fullName": "Broadfield Majestic Oceanic Blue",
+      "price": 2200,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-04-BL.webp",
+      "colorHex": "#0040a6",
+      "colorRgb": [0, 64, 166],
+      "inventory": 6
+    },
+    {
+      "sku": "CL-04-RD",
+      "productId": "CL-04",
+      "variantName": "Rustic Crimson",
+      "fullName": "Broadfield Majestic Rustic Crimson",
+      "price": 2200,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-04-RD.webp",
+      "colorHex": "#7B3F00",
+      "colorRgb": [123, 63, 0],
+      "inventory": 3
+    },
+    {
+      "sku": "CL-04-TQ",
+      "productId": "CL-04",
+      "variantName": "Aqua Green",
+      "fullName": "Broadfield Majestic Aqua Green",
+      "price": 2200,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-04-TQ.webp",
+      "colorHex": "#00b298",
+      "colorRgb": [0, 178, 152],
+      "inventory": 0
+    },
+    {
+      "sku": "CL-05-PT",
+      "productId": "CL-05",
+      "variantName": "Pacific Teal",
+      "fullName": "Countryside Commander Pacific Teal",
+      "price": 2700,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-05-PT.webp",
+      "colorHex": "#479da8",
+      "colorRgb": [71, 157, 168],
+      "inventory": 1
+    },
+    {
+      "sku": "CL-05-RD",
+      "productId": "CL-05",
+      "variantName": "Barn Red",
+      "fullName": "Countryside Commander Barn Red",
+      "price": 2700,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-05-RD.webp",
+      "colorHex": "#7C0A02",
+      "colorRgb": [124, 10, 2],
+      "inventory": 1
+    },
+    {
+      "sku": "CL-06-MT",
+      "productId": "CL-06",
+      "variantName": "Emerald Forest",
+      "fullName": "Danamark Steadfast Emerald Forest",
+      "price": 2800,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-06-MT.webp",
+      "colorHex": "#46f5bb",
+      "colorRgb": [70, 245, 187],
+      "inventory": 1
+    },
+    {
+      "sku": "CL-06-YE",
+      "productId": "CL-06",
+      "variantName": "Golden Wheat",
+      "fullName": "Danamark Steadfast Golden Wheat",
+      "price": 2800,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-06-YE.webp",
+      "colorHex": "#faaf3f",
+      "colorRgb": [250, 175, 63],
+      "inventory": 2
+    },
+    {
+      "sku": "CL-07-GR",
+      "productId": "CL-07",
+      "variantName": "Forest Fern",
+      "fullName": "Greenland Rover Forest Fern",
+      "price": 2900,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-07-GR.webp",
+      "colorHex": "#2ea250",
+      "colorRgb": [46, 162, 80],
+      "inventory": 4
+    },
+    {
+      "sku": "CL-07-YE",
+      "productId": "CL-07",
+      "variantName": "Autumn Amber",
+      "fullName": "Greenland Rover Autumn Amber",
+      "price": 2900,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-07-YE.webp",
+      "colorHex": "#FFBF00",
+      "colorRgb": [255, 191, 0],
+      "inventory": 4
+    },
+    {
+      "sku": "CL-08-GR",
+      "productId": "CL-08",
+      "variantName": "Polder Green",
+      "fullName": "Holland Hamster Polder Green",
+      "price": 7750,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-08-GR.webp",
+      "colorHex": "#C2B280",
+      "colorRgb": [194, 178, 128],
+      "inventory": 8
+    },
+    {
+      "sku": "CL-08-PI",
+      "productId": "CL-08",
+      "variantName": "Tulip Magenta",
+      "fullName": "Holland Hamster Tulip Magenta",
+      "price": 7900,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-08-PI.webp",
+      "colorHex": "#D65282",
+      "colorRgb": [214, 82, 130],
+      "inventory": 3
+    },
+    {
+      "sku": "CL-09-BL",
+      "productId": "CL-09",
+      "variantName": "Adriatic Blue",
+      "fullName": "TerraFirma Veneto Adriatic Blue",
+      "price": 2950,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-09-BL.webp",
+      "colorHex": "#2f6ea3",
+      "colorRgb": [47, 110, 163],
+      "inventory": 4
+    },
+    {
+      "sku": "CL-09-GR",
+      "productId": "CL-09",
+      "variantName": "Tuscan Green",
+      "fullName": "TerraFirma Veneto Tuscan Green",
+      "price": 2950,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-09-GR.webp",
+      "colorHex": "#518b2b",
+      "colorRgb": [81, 139, 43],
+      "inventory": 7
+    },
+    {
+      "sku": "CL-10-SD",
+      "productId": "CL-10",
+      "variantName": "Sahara Dawn",
+      "fullName": "Global Gallant Sahara Dawn",
+      "price": 2600,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-10-SD.webp",
+      "colorHex": "#b8a875",
+      "colorRgb": [184, 168, 117],
+      "inventory": 6
+    },
+    {
+      "sku": "CL-10-VI",
+      "productId": "CL-10",
+      "variantName": "Violet Vintage",
+      "fullName": "Global Gallant Violet Vintage",
+      "price": 2600,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-10-VI.webp",
+      "colorHex": "#8A2BE2",
+      "colorRgb": [138, 43, 226],
+      "inventory": 2
+    },
+    {
+      "sku": "CL-11-SK",
+      "productId": "CL-11",
+      "variantName": "Baltic Blue",
+      "fullName": "Scandinavia Sower Baltic Blue",
+      "price": 3100,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-11-SK.webp",
+      "colorHex": "#95c1f4",
+      "colorRgb": [149, 193, 244],
+      "inventory": 0
+    },
+    {
+      "sku": "CL-11-YE",
+      "productId": "CL-11",
+      "variantName": "Nordic Gold",
+      "fullName": "Scandinavia Sower Nordic Gold",
+      "price": 3100,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-11-YE.webp",
+      "colorHex": "#FFD700",
+      "colorRgb": [255, 215, 0],
+      "inventory": 3
+    },
+    {
+      "sku": "CL-12-BL",
+      "productId": "CL-12",
+      "variantName": "Velocity Blue",
+      "fullName": "Celerity Cruiser Velocity Blue",
+      "price": 3200,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-12-BL.webp",
+      "colorHex": "#1E90FF",
+      "colorRgb": [30, 144, 255],
+      "inventory": 8
+    },
+    {
+      "sku": "CL-12-RD",
+      "productId": "CL-12",
+      "variantName": "Rally Red",
+      "fullName": "Celerity Cruiser Rally Red",
+      "price": 3200,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-12-RD.webp",
+      "colorHex": "#ED2939",
+      "colorRgb": [237, 41, 57],
+      "inventory": 8
+    },
+    {
+      "sku": "CL-13-BL",
+      "productId": "CL-13",
+      "variantName": "Speedway Blue",
+      "fullName": "Rapid Racer Speedway Blue",
+      "price": 7500,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-13-BL.webp",
+      "colorHex": "#2679a6",
+      "colorRgb": [38, 121, 166],
+      "inventory": 1
+    },
+    {
+      "sku": "CL-13-RD",
+      "productId": "CL-13",
+      "variantName": "Raceway Red",
+      "fullName": "Rapid Racer Raceway Red",
+      "price": 7500,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-13-RD.webp",
+      "colorHex": "#CF1020",
+      "colorRgb": [207, 16, 32],
+      "inventory": 5
+    },
+    {
+      "sku": "CL-14-GR",
+      "productId": "CL-14",
+      "variantName": "Emerald Grove",
+      "fullName": "Caribbean Cruiser Emerald Grove",
+      "price": 2300,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-14-GR.webp",
+      "colorHex": "#57ae13",
+      "colorRgb": [87, 174, 19],
+      "inventory": 3
+    },
+    {
+      "sku": "CL-14-RD",
+      "productId": "CL-14",
+      "variantName": "Ruby Fields",
+      "fullName": "Caribbean Cruiser Ruby Fields",
+      "price": 2300,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-14-RD.webp",
+      "colorHex": "#cd2b1e",
+      "colorRgb": [205, 43, 30],
+      "inventory": 5
+    },
+    {
+      "sku": "CL-15-PI",
+      "productId": "CL-15",
+      "variantName": "Vintage Pink",
+      "fullName": "Fieldmaster Classic Vintage Pink",
+      "price": 6200,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-15-PI.webp",
+      "colorHex": "#e1949e",
+      "colorRgb": [225, 148, 158],
+      "inventory": 0
+    },
+    {
+      "sku": "CL-15-SD",
+      "productId": "CL-15",
+      "variantName": "Sahara Dust",
+      "fullName": "Fieldmaster Classic Sahara Dust",
+      "price": 6200,
+      "image": "https://blueprint.the-tractor.store/cdn/img/product/[size]/CL-15-SD.webp",
+      "colorHex": "#dec78c",
+      "colorRgb": [222, 199, 140],
+      "inventory": 9
+    }
+  ]
+}

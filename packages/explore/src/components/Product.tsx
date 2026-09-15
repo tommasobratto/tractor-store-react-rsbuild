@@ -1,6 +1,5 @@
-import * as React from 'react';
 import { Link } from 'react-router-dom';
-import { src, srcset, fmtprice } from '../js/utils';
+import { src, srcset, fmtprice } from 'core';
 
 interface ProductProps {
   name: string;

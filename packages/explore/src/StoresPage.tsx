@@ -1,10 +1,15 @@
 import * as React from 'react';
-import data from './data/db.json';
 import Store from './components/Store';
 import Header from './Header';
 import Footer from './Footer';
+import { useGetStores } from 'core';
+import Loading from 'app/Loading';
 
 const StoresPage: React.FC = () => {
+  const { data: stores, isLoading } = useGetStores();
+
+  if (isLoading) return <Loading />
+
   return (
     <div data-boundary-page="explore">
       <Header />
@@ -15,7 +20,7 @@ const StoresPage: React.FC = () => {
           experts. We have stores in the following locations:
         </p>
         <ul className="e_StoresPage_list">
-          {data.stores.map((store, i) => (
+          {stores.map((store, i) => (
             <Store key={i} {...store} />
           ))}
         </ul>

@@ -1,4 +1,3 @@
-import path from 'node:path';
 import { defineConfig } from '@rsbuild/core';
 import { pluginReact } from '@rsbuild/plugin-react';
 import { pluginModuleFederation } from '@module-federation/rsbuild-plugin';
@@ -32,6 +31,7 @@ export default defineConfig(({ envMode }) => {
           'react-dom': { singleton: true },
           'react-router-dom': { singleton: true },
           zustand: { singleton: true },
+          "@tanstack/react-query": { singleton: true }
         },
         dts: false,
       }),

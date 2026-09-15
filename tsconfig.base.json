@@ -20,7 +20,8 @@
       "app/*": ["./packages/app/src/*"],
       "explore/*": ["./packages/explore/src/*"],
       "checkout/*": ["./packages/checkout/src/*"],
-      "decide/*": ["./packages/decide/src/*"]
+      "decide/*": ["./packages/decide/src/*"],
+      "core/*": ["./packages/decide/src/*"],
     }
   }
 }

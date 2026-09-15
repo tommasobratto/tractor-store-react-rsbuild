@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { src, srcset } from '../js/utils';
+import { src, srcset } from 'core';
 
 interface StoreProps {
   image: string;

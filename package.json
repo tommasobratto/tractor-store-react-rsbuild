@@ -19,10 +19,5 @@
     "@module-federation/rsbuild-plugin": "^2.9.0",
     "@rsbuild/core": "^2.2.4",
     "@rsbuild/plugin-react": "^2.1.0"
-  },
-  "pnpm": {
-    "overrides": {
-      "typescript": "~5.9.0"
-    }
   }
 }

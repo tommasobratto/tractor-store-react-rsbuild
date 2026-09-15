@@ -1,0 +1,21 @@
+{
+  "name": "core",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "types": "index.js",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist && pnpm exec tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@tanstack/react-query": "^5.102.8"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
+}

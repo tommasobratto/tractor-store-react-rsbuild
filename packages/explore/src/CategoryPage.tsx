@@ -1,27 +1,46 @@
-import * as React from 'react';
-import data from './data/db.json';
 import Product from './components/Product';
 import Filter from './components/Filter';
 import Header from './Header';
 import Footer from './Footer';
+import { useGetCategories, useGetProducts, useGetVariants } from 'core';
+import Loading from 'app/Loading';
+import { useMemo } from 'react';
+import { useParams } from 'react-router-dom';
 
-const CategoryPage: React.FC<{ category?: string }> = ({ category }) => {
-  const cat = category && data.categories.find((c) => c.key === category);
+const CategoryPage: React.FC = () => {
+  const { category } = useParams();
 
-  const title = cat ? cat.name : 'All Machines';
-  const products = cat ? cat.products : data.categories.flatMap((c) => c.products);
+  const { data: categories, isLoading: isCategoriesLoading } = useGetCategories();
+  const { data: productsData, isLoading: isProductsLoading } = useGetProducts();
+  const { data: variants, isLoading: isVariantsLoading } = useGetVariants();
 
-  // sort products by price descending
-  products.sort((a, b) => b.startPrice - a.startPrice);
+  const cat = useMemo(() => categories && categories.length > 0 && category ? categories.find((c) => c.key === category) : null, [category, categories]);
+  const products = useMemo(() => productsData.filter(p => cat ? p.category === cat?.key : p), [cat, productsData]);
 
-  const filters = [
+  const productsDisplay = useMemo(() => products.flatMap(p => { 
+    const defaultVariant = variants.filter(v => v.productId === p.id).sort((a, b) => b.price - a.price)[0];
+    if (!defaultVariant) return [];
+
+    return [{
+      ...p,
+      startPrice: defaultVariant.price,
+      image: defaultVariant.image,
+      url: `/product/${defaultVariant.productId}?sku=${defaultVariant.sku}`
+    }];
+  }).sort((a, b) => b.startPrice - a.startPrice), [products, variants])
+  
+  const title = useMemo(() => cat ? cat.name : 'All Machines', [cat]);
+
+  const filters = useMemo(() => [
     { url: '/products', name: 'All', active: !cat },
-    ...data.categories.map((c) => ({
+    ...categories.map((c) => ({
       url: `/products/${c.key}`,
       name: c.name,
       active: c.key === category,
     })),
-  ];
+  ], [categories, cat]);
+
+  if (isCategoriesLoading || isProductsLoading || isVariantsLoading) return <Loading /> 
 
   return (
     <div data-boundary-page="explore">
@@ -29,11 +48,11 @@ const CategoryPage: React.FC<{ category?: string }> = ({ category }) => {
       <main className="e_CategoryPage">
         <h2>{title}</h2>
         <div className="e_CategoryPage__subline">
-          <p>{products.length} products</p>
+          <p>{productsDisplay.length} products</p>
           <Filter filters={filters} />
         </div>
         <ul className="e_CategoryPage_list">
-          {products.map((product, i) => (
+          {productsDisplay.map((product, i) => (
             <Product key={i} {...product} />
           ))}
         </ul>
